@@ -89,6 +89,7 @@ LOCAL_MODULE := adb
 LOCAL_MODULE_TAGS := debug
 
 LOCAL_STATIC_LIBRARIES := libzipfile libunz libcrypto_static $(EXTRA_STATIC_LIBS)
+LOCAL_LDLIBS += -ldl
 ifeq ($(USE_SYSDEPS_WIN32),)
 	LOCAL_STATIC_LIBRARIES += libcutils
 endif
