@@ -643,3 +643,4 @@ service mdnsd /system/bin/mdnsd
 service gatord /system/bin/gatord -c /data/misc/gatord/configuration.xml
     class main
     user root
+    oneshot
