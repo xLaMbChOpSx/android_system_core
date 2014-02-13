@@ -1198,6 +1198,7 @@ static int handle_open(struct fuse* fuse, struct fuse_handler* handler,
         return -ENOMEM;
     }
     TRACE("[%d] OPEN %s\n", handler->token, path);
+
     h->fd = open(path, req->flags);
     if (h->fd < 0) {
         free(h);
